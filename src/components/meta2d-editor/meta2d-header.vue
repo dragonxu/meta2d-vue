@@ -18,11 +18,15 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .meta2d-header-toolbar{
-  height: 50px;
+  height: 42px;
+  border-bottom: 1px solid #dcdfe6;
+  padding: 4px 8px;
+  display: flex;
   .editor-name{
-    width: 300px;
-    font-size: 36px;
-    line-height: 50px;
+    width: 200px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 42px;
     background: -webkit-linear-gradient( 120deg, #bd34fe 30%, #41d1ff );
     -webkit-background-clip:text;
     background-clip: text;
