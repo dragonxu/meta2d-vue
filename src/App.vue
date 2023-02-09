@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Meat2dEditor from './components/meta2d-editor/index.vue'
 </script>
 
 <template>
-  <el-button>test</el-button>
+  <Meat2dEditor />
 </template>

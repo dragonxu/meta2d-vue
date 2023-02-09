@@ -9,7 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@meta2d/activity-diagram": "^1.0.0",
+    "@meta2d/core": "^1.0.2",
     "element-plus": "^2.2.29",
+    "sass": "^1.58.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
