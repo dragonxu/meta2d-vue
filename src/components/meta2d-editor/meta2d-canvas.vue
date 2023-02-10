@@ -6,14 +6,19 @@
 
 <script setup lang="ts">
   import { Meta2d } from '@meta2d/core'
-  import { onMounted, reactive, ref } from 'vue'
+  import { onMounted, ref } from 'vue'
 
   const canvasRef = ref<HTMLCanvasElement>()
-  const meta2dInst = reactive({})
+  const meta2dInst = ref<Meta2d>({} as Meta2d)
 
   onMounted(() => {
-    const a = new Meta2d(canvasRef.value as HTMLCanvasElement, {})
-    console.log('a', canvasRef.value)
+    const _meta2dInst = new Meta2d(canvasRef.value as HTMLCanvasElement, {})
+    meta2dInst.value = _meta2dInst
+
+    // meta2d的增加节点等操作都是在原始对象上进行的，这不会触发vue的响应式更新，将原始对象的canvas.store替换成响应式对象即可解决
+    // https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html#reactive-proxy-vs-original-1
+    // @ts-ignore
+    _meta2dInst.canvas.store = meta2dInst.value.store
   })
 </script>
 
