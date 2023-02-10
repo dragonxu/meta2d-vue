@@ -1,3 +1,5 @@
+import logo from '../logo.png'
+
 export const commonPens = {
   name: 'common',
   titile: '基本组件',
@@ -162,6 +164,7 @@ export const commonPens = {
         name: 'image',
         width: 100,
         height: 100,
+        image: logo,
       },
     },
     {
@@ -187,8 +190,11 @@ export const commonPens = {
       icon: 't-pc',
       config: {
         name: 'video',
-        width: 100,
-        height: 100,
+        width: 400,
+        height: 200,
+        video:
+          'https://vod-progressive.akamaized.net/exp=1676032514~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F3127%2F18%2F465639513%2F2065868163.mp4~hmac=6b3ec1c8b5ae2b23d9a6250792fa2f7513c88d2e4c15941f1c891e06c4ab665d/vimeo-prod-skyfire-std-us/01/3127/18/465639513/2065868163.mp4',
+        autoPlay: true,
       },
     },
     // {
