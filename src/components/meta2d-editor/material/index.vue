@@ -60,7 +60,7 @@
           line-height: 40px;
           box-sizing: border-box;
           &:hover {
-            color: red;
+            color: #409eff;
           }
           .t-icon {
             font-size: 36px;
