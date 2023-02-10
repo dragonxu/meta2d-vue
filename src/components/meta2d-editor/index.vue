@@ -14,7 +14,9 @@
   import Meta2dCanvas from './meta2d-canvas.vue'
   import Meta2dMaterial from './meta2d-material.vue'
   import Meta2dProps from './meta2d-props.vue'
+  import './iconfont.css'
 </script>
+
 
 <style lang="scss" scoped>
 .meta2d-editor-wrapper{
