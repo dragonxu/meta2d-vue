@@ -2,7 +2,7 @@
   <div class="meta2d-material">
     <el-scrollbar>
       <el-collapse>
-        <el-collapse-item title="Consistency" name="1">
+        <el-collapse-item title="基本组件" name="base">
           <div>
             Consistent with real life: in line with the process and logic of
             real life, and comply with languages and habits that the users are
