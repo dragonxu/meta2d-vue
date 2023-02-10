@@ -4,6 +4,6 @@ import { env } from 'process'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: env.NODE_ENV === 'development' ? '/' : '/meta2d',
+  base: env.NODE_ENV === 'development' ? '/' : '/meta2d-vue/',
   plugins: [vue()],
 })
