@@ -12,7 +12,9 @@
       <el-tab-pane v-else label="画布" name="canvas">
         <canvas-props />
       </el-tab-pane>
-      <el-tab-pane label="结构" name="third">Role</el-tab-pane>
+      <el-tab-pane label="结构" name="structure">
+        <canvas-structure />
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
@@ -23,6 +25,7 @@
   import useMeta2dStore from '../store'
   import PenDataEntry from './components/pen-data-entry'
   import CanvasProps from './canvas-props.vue'
+  import CanvasStructure from './canvas-structure.vue'
 
   const activeName = ref('canvas')
 
@@ -31,7 +34,13 @@
   watch(
     () => activePen.value,
     (newVal) => {
-      activeName.value = newVal ? 'style' : 'canvas'
+      if (activeName.value === 'structure') return
+      // activeName.value = newVal ? 'style' : 'canvas'
+      if (!newVal) {
+        activeName.value = 'canvas'
+      } else if (activeName.value === 'canvas') {
+        activeName.value = 'style'
+      }
     }
   )
 </script>

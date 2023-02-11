@@ -62,7 +62,6 @@
   import useMeta2dStore from '../store'
 
   const { meta2dInst, meta2dInstData } = storeToRefs(useMeta2dStore())
-  // const storeData = computed(() => meta2dInst.value.store.data)
 
   const render = () => {
     meta2dInst.value.render()

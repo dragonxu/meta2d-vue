@@ -1,8 +1,8 @@
 @font-face {
   font-family: "m2-icon"; /* Project id 3890777 */
-  src: url('//at.alicdn.com/t/c/font_3890777_y4amo14j93f.woff2?t=1676097090156') format('woff2'),
-       url('//at.alicdn.com/t/c/font_3890777_y4amo14j93f.woff?t=1676097090156') format('woff'),
-       url('//at.alicdn.com/t/c/font_3890777_y4amo14j93f.ttf?t=1676097090156') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_3890777_11xg9fqh22y.woff2?t=1676097919490') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3890777_11xg9fqh22y.woff?t=1676097919490') format('woff'),
+       url('//at.alicdn.com/t/c/font_3890777_11xg9fqh22y.ttf?t=1676097919490') format('truetype');
 }
 
 .m2-icon {
@@ -11,6 +11,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.m2-icon-ui_component:before {
+  content: "\e6b6";
 }
 
 .m2-icon-yincangbukejian:before {
