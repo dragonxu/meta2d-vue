@@ -13,11 +13,11 @@
   import Meta2dHeader from './meta2d-header.vue'
   import Meta2dCanvas from './meta2d-canvas.vue'
   import Meta2dMaterial from './material/index.vue'
-  import Meta2dProps from './meta2d-props.vue'
+  import Meta2dProps from './props/index.vue'
   import './iconfont.css'
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .meta2d-editor-wrapper {
     height: 100vh;
     overflow: hidden;
@@ -29,6 +29,9 @@
       overflow: hidden;
       .meta2d-canvas {
         flex: 1;
+      }
+      .el-form-item__label {
+        font-size: 12px;
       }
     }
   }
