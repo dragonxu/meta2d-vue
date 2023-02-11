@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-  import logo from './logo.png'
+  import logo from './assets/logo.png'
 </script>
 
 <style lang="scss" scoped>

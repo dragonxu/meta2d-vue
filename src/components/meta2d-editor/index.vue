@@ -14,7 +14,8 @@
   import Meta2dCanvas from './meta2d-canvas.vue'
   import Meta2dMaterial from './material/index.vue'
   import Meta2dProps from './props/index.vue'
-  import './iconfont.css'
+  import './assets/t-icon.css'
+  import './assets/m2-icon.css'
 </script>
 
 <style lang="scss">
