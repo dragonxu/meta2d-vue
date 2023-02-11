@@ -6,4 +6,8 @@ import { env } from 'process'
 export default defineConfig({
   base: env.NODE_ENV === 'development' ? '/' : '/meta2d-vue/',
   plugins: [vue()],
+  server: {
+    open: true,
+    port: 7777,
+  },
 })
