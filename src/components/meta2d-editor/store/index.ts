@@ -8,6 +8,12 @@ const useMeta2dStore = defineStore('meta2d', {
     activePen: undefined,
   }),
 
+  getters: {
+    meta2dInstData(state) {
+      return state.meta2dInst?.store?.data
+    },
+  },
+
   actions: {
     setActivePen(pen: Pen) {
       this.activePen = pen
