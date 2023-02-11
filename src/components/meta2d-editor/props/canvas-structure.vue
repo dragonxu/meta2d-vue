@@ -74,6 +74,7 @@
       .pen-name {
         margin: 0 4px;
         flex: 1;
+        cursor: default;
       }
     }
     .active-pen {

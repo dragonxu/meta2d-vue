@@ -2,10 +2,8 @@
   <div class="meta2d-props">
     <el-tabs v-if="meta2dInst" v-model="activeName">
       <template v-if="activePen">
-        <el-tab-pane label="外观" name="style">
-          <pen-data-entry label="组件名称" field="name">
-            <el-input disabled />
-          </pen-data-entry>
+        <el-tab-pane label="外观" name="exterior">
+          <pen-exterior />
         </el-tab-pane>
         <el-tab-pane label="动效" name="second">Config</el-tab-pane>
       </template>
@@ -23,9 +21,9 @@
   import { storeToRefs } from 'pinia'
   import { ref, watch } from 'vue'
   import useMeta2dStore from '../store'
-  import PenDataEntry from './components/pen-data-entry'
   import CanvasProps from './canvas-props.vue'
   import CanvasStructure from './canvas-structure.vue'
+  import PenExterior from './pen-exterior.vue'
 
   const activeName = ref('canvas')
 
@@ -39,7 +37,7 @@
       if (!newVal) {
         activeName.value = 'canvas'
       } else if (activeName.value === 'canvas') {
-        activeName.value = 'style'
+        activeName.value = 'exterior'
       }
     }
   )

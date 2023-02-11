@@ -2,7 +2,8 @@ import { Component, defineComponent, h, PropType } from 'vue'
 import { storeToRefs } from 'pinia'
 import { Pen } from '@meta2d/core'
 import { ElCol, ElRow } from 'element-plus'
-import useMeta2dStore from '../../store'
+import useMeta2dStore from '../../../store'
+import './style.scss'
 
 export default defineComponent({
   props: {
@@ -18,12 +19,20 @@ export default defineComponent({
     },
   },
   setup(props, { slots }) {
-    const { activePen } = storeToRefs(useMeta2dStore())
+    const { activePen, meta2dInst } = storeToRefs(useMeta2dStore())
     // vnode需要是一个数据录入组件才能正常工作
     let vnode: Component | string = ''
     if (slots.default) {
       const vnodes = slots.default()
       vnode = vnodes[0] || ''
+    }
+
+    const handlePenValueUpdate = (val: any) => {
+      // console.log('val', val)
+      meta2dInst.value.setValue({
+        id: activePen.value?.id,
+        [props.field]: val,
+      })
     }
 
     return () => {
@@ -46,7 +55,7 @@ export default defineComponent({
                   style: {
                     display: 'flex',
                     alignItems: 'center',
-                    fontSize: '14px',
+                    fontSize: '12px',
                     color: '#606266',
                   },
                 },
@@ -59,7 +68,10 @@ export default defineComponent({
                 },
                 () => [
                   h(vnode as any, {
-                    modelValue: activePen.value?.[props.field],
+                    'modelValue': activePen.value?.[props.field],
+                    'onUpdate:modelValue': handlePenValueUpdate,
+                    'controlsPosition': 'right',
+                    'size': 'small',
                   }),
                 ]
               ),
