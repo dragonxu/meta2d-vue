@@ -5,10 +5,10 @@ export const commonPens = {
   titile: '基本组件',
   pens: [
     {
-      name: '矩形',
+      name: '正方形',
       icon: 't-rect',
       config: {
-        name: '正方形',
+        name: 'square',
         width: 100,
         height: 100,
       },
