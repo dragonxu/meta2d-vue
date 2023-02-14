@@ -113,15 +113,6 @@ export const commonPens = {
       },
     },
     {
-      name: '线条',
-      icon: 't-line',
-      config: {
-        name: 'line',
-        width: 100,
-        height: 100,
-      },
-    },
-    {
       name: '云',
       icon: 't-cloud',
       config: {

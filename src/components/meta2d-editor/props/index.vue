@@ -23,7 +23,7 @@
   import useMeta2dStore from '../store'
   import CanvasProps from './canvas-props.vue'
   import CanvasStructure from './canvas-structure.vue'
-  import PenExterior from './pen-exterior.vue'
+  import PenExterior from './pen-exterior/index.vue'
 
   const activeName = ref('canvas')
 
@@ -54,8 +54,10 @@
       }
       .el-tabs__nav {
         width: 100%;
+        display: flex;
         .el-tabs__item {
-          width: 33.33%;
+          // width: 33.33%;
+          flex: 1;
           padding: 0;
           text-align: center;
         }
